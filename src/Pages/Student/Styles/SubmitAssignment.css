@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+.submit-assignment-container{
+    width: 82vw;
+    height: 100vh;
+    padding-top: 10vh;
+    padding-bottom : 10vh;
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+    font-size: 3vh;
+}
+.all-assignments-container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: auto;
+    padding: 2% 10%;
+    flex-wrap: wrap;
+}
+.assignment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 40vh;
+    padding: 2% 2%;
+    margin: 2% 1%;
+    background-color: white;
+    border-radius: 20px;
+    border: solid black 1px;
+    color: black
+}
+.assignment-container>h3{
+    width: 100%;
+    padding: 3%;
+    text-align: center;
+    border-bottom: solid black 1px;
+}
+.assignment-container>div{
+    display: flex;
+    width:100%;
+    height: auto;
+    flex-direction: column;
+}
+.assignment-container >div > input{
+    width: 100%;
+    padding: 2%;
+    height: 5vh;
+    font-size: 15px ;
+    text-align:left;
+    margin-bottom: 2vh;
+}
+.assignment-container > div > button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 45%;
+    font-size: 20px;
+    border-radius: 0;
+    border-width: 0;
+}
