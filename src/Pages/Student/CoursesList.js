@@ -5,37 +5,6 @@ export default function CoursesList(){
     
     const [courses, setCourses] = useState([])
 
-   
-
-    /*useEffect(() => {
-        const fetchCourses = async () => {
-        try {
-           
-            //const response = await axios.get("http://127.0.0.1:8000/courses/get-courses");
-            const response = await fetch("http://127.0.0.1:8000/courses/get-courses", {
-                method: "GET",
-                credentials: "include", 
-              });
-
-            data = await response.json()
-            if (response.status === 200) {
-                setCourses(data.courses);            
-            } else {
-                console.log("Fetching courses, error:", data);
-                alert("Fetching courses failed");
-            }
-        } catch (e) {
-            console.log("Error fetching courses:", e);
-            alert("Error fetching courses");
-        }
-       
-
-    }
-
-        fetchCourses()
-
-    }, [])*/
-
     useEffect(() => {
         const fetchCourses = async () => {
           try {

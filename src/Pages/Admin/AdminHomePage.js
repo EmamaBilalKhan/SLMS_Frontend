@@ -22,6 +22,7 @@ export default function AdminHomePage(){
         setId(null)
         setUserRole(null)
         localStorage.removeItem("refresh_token")
+        window.location.href = "/";
     };
 
     return(

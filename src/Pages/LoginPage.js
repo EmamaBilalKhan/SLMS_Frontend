@@ -78,7 +78,7 @@ export default function LoginPage(){
                 {
                     isLoading?  
                     <div className="loading">
-                    <ClipLoader color="white" size={30} />
+                        <ClipLoader color="white" size={30} />
                     </div>:
                 
                 <button type="submit">Login</button>}

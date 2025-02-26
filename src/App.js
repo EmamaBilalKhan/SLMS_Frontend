@@ -28,9 +28,7 @@ function App() {
   useEffect(()=>{
     const fetchAccessToken = async() => {
       await getAccessToken()
-      setTimeout(()=>{
         setIsLoading(false)
-      },2000)
     }
     fetchAccessToken()
   },[])

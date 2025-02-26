@@ -46,6 +46,7 @@ export default function GradeSubmission(){
 
             if(response.status === 200){
                 alert("Assignment Graded Successfully")
+                window.location.reload();
                 console.log(response.data)
             }
             else{

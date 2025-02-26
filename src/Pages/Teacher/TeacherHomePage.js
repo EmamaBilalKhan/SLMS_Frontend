@@ -19,6 +19,7 @@ export default function TeacherHomePage(){
         setId(null)
         setUserRole(null)
         localStorage.removeItem("refresh_token")
+        window.location.href = "/";
     };
 
   const outlet = useOutlet();

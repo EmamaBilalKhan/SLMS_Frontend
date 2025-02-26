@@ -24,6 +24,8 @@ export default function CreateCourse(){
 
             if(response.status === 201){
                 alert("Course Created Successfully")
+                setCourseName("")
+                setCourseDescription("")
                 console.log(response.data)
             }
             else{
@@ -39,12 +41,12 @@ export default function CreateCourse(){
 
     return(
         <div className="create-course-container">
-        <div className="create-course-input-container">
+        <form className="create-course-input-container" onSubmit={handleSubmission}>
              <h2>Create Course</h2>
-            <input className="create-course-input" type="text" placeholder="Course Name" onChange={(e)=>setCourseName(e.target.value)}/>
-            <input className="create-course-input" type="text" placeholder="Course Description" onChange={(e)=>setCourseDescription(e.target.value)}/>
-            <button className="create-course-input-button" onClick={(e)=>handleSubmission(e)}>Create Course</button>
-        </div>
+            <input className="create-course-input" type="text" placeholder="Course Name" value={courseName} onChange={(e)=>setCourseName(e.target.value)} maxLength={15} minLength={5} required/>
+            <input className="create-course-input" type="text" placeholder="Course Description" value={courseDescription} onChange={(e)=>setCourseDescription(e.target.value)} maxLength={30} minLength={5} required/>
+            <button type="submit" className="create-course-input-button">Create Course</button>
+        </form>
         </div>
     )
 }

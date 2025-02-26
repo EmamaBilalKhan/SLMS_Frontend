@@ -11,7 +11,11 @@ export default function AssignmentSubmission(){
     useEffect(() => {
         const fetchAssignments = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:8000/assignments/get-assignments");
+            const response = await axios.get("http://127.0.0.1:8000/assignments/get-assignments",
+                {
+                    headers:{"Authorization" : `Bearer ${accessToken}`}
+                }
+            );
     
             if (response.status === 200) {
                 setAssignments(response.data.assignments);            
@@ -23,8 +27,9 @@ export default function AssignmentSubmission(){
             console.log("Error fetching assignments:", e);
             alert("Error fetching assignments");
         }}
-
-        fetchAssignments()
+        
+            fetchAssignments()
+        
 
     }, [])
 
@@ -49,6 +54,7 @@ export default function AssignmentSubmission(){
             })
             if(response.status === 201){
                 alert("Assignment submitted successfully")
+                window.location.reload();
             }
            
             else{

@@ -20,6 +20,7 @@ export default function StudentHomePage(){
         setId(null)
         setUserRole(null)
         localStorage.removeItem("refresh_token")
+        window.location.href = "/";
     };
 
 
